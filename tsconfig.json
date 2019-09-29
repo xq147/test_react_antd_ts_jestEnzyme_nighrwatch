@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "target": "es2016",
+    "noImplicitAny": true,  // 不允许隐式的any类型声明，即必须显式地标注某个变量的类型是any，推荐启用！
+    "strictNullChecks": true,  // 严格的空值检查，对可能会是undefined或null的变量引用提出告警，推荐启用！
+    "sourceMap": true,
+    "jsx": "react",
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "paths": {
+      "@components/*": ["components/*"],
+      "@views/*": ["modules/views/*"],
+      "@viewComponents/*": ["modules/components/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "lib": [
+      "dom",
+      "es2015"
+    ]  // 加上这两个lib，就可以使用ts书写基于协程的同步代码，使用async和await关键字，并且支持输出为es5！
+  }
+}
